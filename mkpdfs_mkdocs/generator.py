@@ -180,7 +180,7 @@ class Generator(object):
 
     def _gen_toc_section(self, section):
         for p in section.children:
-            if not p.is_page and p.meta != None and 'pdf' \
+            if not p.is_page and p.meta and p.meta != None and 'pdf' \
             in p.meta and p.meta['pdf'] == False:
                 continue
             stoc = self._gen_toc_for_section(p.file.url, p)
