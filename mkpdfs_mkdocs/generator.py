@@ -180,7 +180,7 @@ class Generator(object):
 
     def _gen_toc_section(self, section):
         for p in section.children:
-            if not p.is_page or not hasattr(p, 'meta')
+            if not p.is_page or not hasattr(p, 'meta'):
                 continue
             if not p.is_page and hasattr(p, 'meta') and p.meta != None and 'pdf' \
             in p.meta and p.meta['pdf'] == False:
